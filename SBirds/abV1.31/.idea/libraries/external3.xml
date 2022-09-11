@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="external">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/abV1.31/external/WebSocket.jar!/" />
+      <root url="jar://$PROJECT_DIR$/abV1.31/external/Jama-1.0.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/abV1.31/external/commons-codec-1.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/abV1.31/external/json-simple-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/abV1.31/external/jar-in-jar-loader.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

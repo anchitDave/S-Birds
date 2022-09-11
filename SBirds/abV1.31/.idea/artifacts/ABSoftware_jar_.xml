@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact name="ABSoftware_jar_">
+    <output-path>$PROJECT_DIR$/out/artifacts/ABSoftware_jar_</output-path>
+    <root id="root">
+      <element id="extracted-dir" path="$PROJECT_DIR$/abV1.31/ABSoftware.jar" path-in-jar="/" />
+      <element id="module-output" name="abV1.31" />
+      <element id="library" level="project" name="abV1.31" />
+    </root>
+  </artifact>
+</component>

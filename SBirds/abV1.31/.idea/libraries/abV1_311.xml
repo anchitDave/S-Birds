@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="abV1.311">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/abV1.31/ABServer.jar!/" />
+      <root url="jar://$PROJECT_DIR$/abV1.31/abV1.31.jar!/" />
+      <root url="jar://$PROJECT_DIR$/abV1.31/ABSoftware.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

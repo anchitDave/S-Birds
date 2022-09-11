@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_abv1.31" default="compile.module.abv1.31">
+  <dirname property="module.abv1.31.basedir" file="${ant.file.module_abv1.31}"/>
+  
+  <property name="module.jdk.home.abv1.31" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.abv1.31" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.abv1.31" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.abv1.31" value="-encoding UTF-8 -source 1.6 ${compiler.args}"/>
+  
+  <property name="abv1.31.output.dir" value="${module.abv1.31.basedir}/../out/production/abV1.31"/>
+  <property name="abv1.31.testoutput.dir" value="${module.abv1.31.basedir}/../out/test/abV1.31"/>
+  
+  <path id="abv1.31.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="abv1.31.module.production.classpath">
+    <path refid="${module.jdk.classpath.abv1.31}"/>
+    <path refid="library.abv1.31.classpath"/>
+    <path refid="library.external.classpath"/>
+  </path>
+  
+  <path id="abv1.31.runtime.production.module.classpath">
+    <pathelement location="${abv1.31.output.dir}"/>
+    <path refid="library.abv1.31.classpath"/>
+    <path refid="library.external.classpath"/>
+  </path>
+  
+  <path id="abv1.31.module.classpath">
+    <path refid="${module.jdk.classpath.abv1.31}"/>
+    <pathelement location="${abv1.31.output.dir}"/>
+    <path refid="library.abv1.31.classpath"/>
+    <path refid="library.external.classpath"/>
+  </path>
+  
+  <path id="abv1.31.runtime.module.classpath">
+    <pathelement location="${abv1.31.testoutput.dir}"/>
+    <pathelement location="${abv1.31.output.dir}"/>
+    <path refid="library.abv1.31.classpath"/>
+    <path refid="library.external.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.abv1.31">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.abv1.31">
+    <patternset refid="excluded.from.module.abv1.31"/>
+  </patternset>
+  
+  <path id="abv1.31.module.sourcepath">
+    <dirset dir="${module.abv1.31.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.abv1.31" depends="compile.module.abv1.31.production,compile.module.abv1.31.tests" description="Compile module abV1.31"/>
+  
+  <target name="compile.module.abv1.31.production" depends="register.custom.compilers" description="Compile module abV1.31; production classes">
+    <mkdir dir="${abv1.31.output.dir}"/>
+    <javac2 destdir="${abv1.31.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.abv1.31}/javac">
+      <compilerarg line="${compiler.args.abv1.31}"/>
+      <bootclasspath refid="abv1.31.module.bootclasspath"/>
+      <classpath refid="abv1.31.module.production.classpath"/>
+      <src refid="abv1.31.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.abv1.31"/>
+    </javac2>
+    
+    <copy todir="${abv1.31.output.dir}">
+      <fileset dir="${module.abv1.31.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.abv1.31.tests" depends="register.custom.compilers,compile.module.abv1.31.production" description="compile module abV1.31; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.abv1.31" description="cleanup module">
+    <delete dir="${abv1.31.output.dir}"/>
+    <delete dir="${abv1.31.testoutput.dir}"/>
+  </target>
+</project>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="abV1.31/abV1.31/src"/>
+	<classpathentry kind="lib" path="abV1.31/abV1.31/ABServer.jar"/>
+	<classpathentry kind="lib" path="abV1.31/abV1.31/ABSoftware.jar"/>
+	<classpathentry kind="lib" path="abV1.31/abV1.31/abV1.31.jar"/>
+	<classpathentry kind="lib" path="abV1.31/abV1.31/external/commons-codec-1.7.jar"/>
+	<classpathentry kind="lib" path="abV1.31/abV1.31/external/Jama-1.0.2.jar"/>
+	<classpathentry kind="lib" path="abV1.31/abV1.31/external/json-simple-1.1.1.jar"/>
+	<classpathentry kind="lib" path="abV1.31/abV1.31/external/WebSocket.jar"/>
+	<classpathentry kind="lib" path="abV1.31/out/artifacts/abV1_31_jar/abV1.31.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="abV1.31/abV1.31/bin"/>
+</classpath>
